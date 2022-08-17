@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "cypress run --browser chrome"
+    "cypress:run": "cypress run --browser chrome"
   },
   "repository": {
     "type": "git",

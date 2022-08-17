@@ -4,7 +4,7 @@ on: [push]
 jobs:
   cypress-e2e-chrome88:
     name: Run on Chrome 88
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     container: cypress/browsers:node14.17.0-chrome88-ff89
     steps:
       - uses: actions/checkout@v2
@@ -17,5 +17,5 @@ jobs:
           $(npm bin)/cypress verify
 
       - name: Run Cypress tests
-        run: npm run test:chrome
+        run: yarn cypress:run
         continue-on-error: true
